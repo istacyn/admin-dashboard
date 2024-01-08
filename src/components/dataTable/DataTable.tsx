@@ -6,9 +6,10 @@ type Props = {
     columns: GridColDef[];
     rows: object[];
     slug: string;
-}
+};
 
 const DataTable = (props: Props) => {
+    // TEST THE API
 
     const handleDelete = (id: number) => {
         //delete the item
@@ -18,7 +19,7 @@ const DataTable = (props: Props) => {
         field: "action",
         headerName: "Action",
         width: 200,
-        renderCell:(params) => {
+        renderCell: (params) => {
             return (
                 <div className="action">
                     <Link to={`/${props.slug}/${params.row.id}`}>
@@ -45,7 +46,7 @@ const DataTable = (props: Props) => {
                         },
                     },
                 }}
-                slots={{toolbar: GridToolbar}}
+                slots={{ toolbar: GridToolbar }}
                 slotProps={{
                     toolbar: {
                         showQuickFilter: true,

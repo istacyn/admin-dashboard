@@ -6,11 +6,11 @@ import { useState } from 'react';
 import "./users.scss";
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 90 },
+  { field: "id", headerName: "ID", width: 70 },
   {
     field: "img",
     headerName: "Avatar",
-    width: 100,
+    width: 90,
     renderCell: (params) => {
       return <img src={params.row.img || "/noavatar.png"} alt="" />;
     },
@@ -19,42 +19,42 @@ const columns: GridColDef[] = [
     field: "firstName",
     type: "string",
     headerName: "First name",
-    width: 150,
+    width: 100,
   },
   {
     field: "lastName",
     type: "string",
     headerName: "Last name",
-    width: 150,
+    width: 100,
   },
   {
     field: "email",
     type: "string",
     headerName: "Email",
-    width: 200,
+    width: 180,
   },
   {
     field: "phone",
     type: "string",
     headerName: "Phone",
-    width: 200,
+    width: 130,
   },
   {
     field: "createdAt",
     headerName: "Created At",
-    width: 200,
+    width: 100,
     type: "string",
   },
   {
     field: "verified",
     headerName: "Verified",
-    width: 150,
+    width: 90,
     type: "boolean",
   },
 ];
 
 const Users = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="users">
