@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import "./dataTable.scss";
 
 type Props = {
-    columns: GridColDef[],
-    rows: object[],
-    slug: string,
+    columns: GridColDef[];
+    rows: object[];
+    slug: string;
 }
 
 const DataTable = (props: Props) => {
 
-const handleDelete = (id: number) => {
-    //delete the item
-}
+    const handleDelete = (id: number) => {
+        //delete the item
+    };
 
-    const actionColumn:GridColDef = {
+    const actionColumn: GridColDef = {
         field: "action",
         headerName: "Action",
         width: 200,
@@ -39,11 +39,11 @@ const handleDelete = (id: number) => {
                 rows={props.rows}
                 columns={[...props.columns, actionColumn]}
                 initialState={{
-                pagination: {
-                    paginationModel: {
-                    pageSize: 10,
+                    pagination: {
+                        paginationModel: {
+                            pageSize: 10,
+                        },
                     },
-                },
                 }}
                 slots={{toolbar: GridToolbar}}
                 slotProps={{
@@ -60,7 +60,7 @@ const handleDelete = (id: number) => {
                 disableColumnSelector
             />
         </div>
-    )
-}
+    );
+};
 
 export default DataTable;
