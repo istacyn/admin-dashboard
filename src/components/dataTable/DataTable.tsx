@@ -13,6 +13,7 @@ const DataTable = (props: Props) => {
 
     const handleDelete = (id: number) => {
         //delete the item
+        console.log(id);
     };
 
     const actionColumn: GridColDef = {

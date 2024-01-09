@@ -34,4 +34,3 @@ const Add = (props: Props) => {
 };
 
 export default Add;
-
